@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use FeatureSeal, please cite this software."
+title: "FeatureSeal: independently replayable point-in-time feature joins"
+type: software
+authors:
+  - given-names: Omar
+    family-names: Ibrahim
+    email: 31526072+omar07ibrahim@users.noreply.github.com
+repository-code: "https://github.com/omar07ibrahim/featureseal"
+url: "https://github.com/omar07ibrahim/featureseal"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-08-10

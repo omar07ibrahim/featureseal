@@ -1,0 +1,30 @@
+name: Feature request
+description: Propose a bounded, testable FeatureSeal capability
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What temporal join or audit problem is not covered?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe inputs, outputs, bounds, and deterministic semantics.
+    validations:
+      required: true
+  - type: textarea
+    id: independence
+    attributes:
+      label: Verification strategy
+      description: How can the verifier replay this without sharing analyzer logic?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

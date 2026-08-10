@@ -1,0 +1,55 @@
+name: Bug report
+description: Report reproducible incorrect FeatureSeal behavior
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic data only. Never include credentials, private events, or personal data."
+  - type: input
+    id: version
+    attributes:
+      label: FeatureSeal version
+      placeholder: "0.1.0 or commit SHA"
+    validations:
+      required: true
+  - type: dropdown
+    id: command
+    attributes:
+      label: Affected surface
+      options:
+        - analyze
+        - verify
+        - inspect
+        - report
+        - Python API
+        - CI or evidence
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Include the error and a minimal synthetic snapshot.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, operating system, and install method.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety
+      options:
+        - label: I used synthetic data and removed secrets and personal information.
+          required: true
