@@ -1,0 +1,269 @@
+{
+  "format": "featureseal.snapshot.v1",
+  "snapshot_id": "late-feature-incident",
+  "features": [
+    {
+      "name": "account_age",
+      "value_type": "integer",
+      "max_age_seconds": 1000
+    },
+    {
+      "name": "country_tier",
+      "value_type": "integer",
+      "max_age_seconds": 1000
+    },
+    {
+      "name": "device_trust",
+      "value_type": "number",
+      "max_age_seconds": 300
+    },
+    {
+      "name": "risk_score",
+      "value_type": "number",
+      "max_age_seconds": 200
+    }
+  ],
+  "events": [
+    {
+      "event_id": "a-age-1",
+      "entity": "acct-a",
+      "feature": "account_age",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 120,
+      "source": "crm"
+    },
+    {
+      "event_id": "a-country-1",
+      "entity": "acct-a",
+      "feature": "country_tier",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 1,
+      "source": "geo"
+    },
+    {
+      "event_id": "b-age-1",
+      "entity": "acct-b",
+      "feature": "account_age",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 400,
+      "source": "crm"
+    },
+    {
+      "event_id": "b-country-1",
+      "entity": "acct-b",
+      "feature": "country_tier",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 2,
+      "source": "geo"
+    },
+    {
+      "event_id": "c-age-1",
+      "entity": "acct-c",
+      "feature": "account_age",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 30,
+      "source": "crm"
+    },
+    {
+      "event_id": "c-country-1",
+      "entity": "acct-c",
+      "feature": "country_tier",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 1,
+      "source": "geo"
+    },
+    {
+      "event_id": "c-device-1",
+      "entity": "acct-c",
+      "feature": "device_trust",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 0.8,
+      "source": "device"
+    },
+    {
+      "event_id": "c-risk-1",
+      "entity": "acct-c",
+      "feature": "risk_score",
+      "event_time": 100,
+      "available_time": 100,
+      "value": 0.15,
+      "source": "risk"
+    },
+    {
+      "event_id": "a-device-1",
+      "entity": "acct-a",
+      "feature": "device_trust",
+      "event_time": 400,
+      "available_time": 400,
+      "value": 0.9,
+      "source": "device"
+    },
+    {
+      "event_id": "a-risk-1",
+      "entity": "acct-a",
+      "feature": "risk_score",
+      "event_time": 450,
+      "available_time": 450,
+      "value": 0.2,
+      "source": "risk"
+    },
+    {
+      "event_id": "a-age-2",
+      "entity": "acct-a",
+      "feature": "account_age",
+      "event_time": 500,
+      "available_time": 500,
+      "value": 121,
+      "source": "crm"
+    },
+    {
+      "event_id": "b-device-1",
+      "entity": "acct-b",
+      "feature": "device_trust",
+      "event_time": 500,
+      "available_time": 500,
+      "value": 0.7,
+      "source": "device"
+    },
+    {
+      "event_id": "b-risk-1",
+      "entity": "acct-b",
+      "feature": "risk_score",
+      "event_time": 500,
+      "available_time": 500,
+      "value": 0.4,
+      "source": "risk"
+    },
+    {
+      "event_id": "a-risk-2",
+      "entity": "acct-a",
+      "feature": "risk_score",
+      "event_time": 600,
+      "available_time": 600,
+      "value": 0.3,
+      "source": "risk"
+    },
+    {
+      "event_id": "a-country-2",
+      "entity": "acct-a",
+      "feature": "country_tier",
+      "event_time": 700,
+      "available_time": 700,
+      "value": 2,
+      "source": "geo"
+    },
+    {
+      "event_id": "a-risk-3",
+      "entity": "acct-a",
+      "feature": "risk_score",
+      "event_time": 800,
+      "available_time": 800,
+      "value": 0.8,
+      "source": "risk"
+    },
+    {
+      "event_id": "a-device-2",
+      "entity": "acct-a",
+      "feature": "device_trust",
+      "event_time": 650,
+      "available_time": 900,
+      "value": 0.2,
+      "source": "device"
+    },
+    {
+      "event_id": "b-risk-2",
+      "entity": "acct-b",
+      "feature": "risk_score",
+      "event_time": 720,
+      "available_time": 900,
+      "value": 0.9,
+      "source": "risk"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "obs-c-180",
+      "entity": "acct-c",
+      "at": 180,
+      "selections": {
+        "account_age": "c-age-1",
+        "country_tier": "c-country-1",
+        "device_trust": "c-device-1",
+        "risk_score": "c-risk-1"
+      }
+    },
+    {
+      "observation_id": "obs-a-550",
+      "entity": "acct-a",
+      "at": 550,
+      "selections": {
+        "account_age": "a-age-2",
+        "country_tier": "a-country-1",
+        "device_trust": "a-device-1",
+        "risk_score": "a-risk-1"
+      }
+    },
+    {
+      "observation_id": "obs-a-620",
+      "entity": "acct-a",
+      "at": 620,
+      "selections": {
+        "account_age": "a-age-2",
+        "country_tier": "a-country-1",
+        "device_trust": "a-device-1",
+        "risk_score": "a-risk-1"
+      }
+    },
+    {
+      "observation_id": "obs-a-700",
+      "entity": "acct-a",
+      "at": 700,
+      "selections": {
+        "account_age": "a-age-2",
+        "country_tier": "a-country-2",
+        "device_trust": "a-device-2",
+        "risk_score": "a-risk-2"
+      }
+    },
+    {
+      "observation_id": "obs-a-750",
+      "entity": "acct-a",
+      "at": 750,
+      "selections": {
+        "account_age": "a-age-2",
+        "country_tier": "a-country-2",
+        "device_trust": null,
+        "risk_score": "a-risk-3"
+      }
+    },
+    {
+      "observation_id": "obs-b-750",
+      "entity": "acct-b",
+      "at": 750,
+      "selections": {
+        "account_age": "b-age-1",
+        "country_tier": "a-country-2",
+        "device_trust": null,
+        "risk_score": null
+      }
+    },
+    {
+      "observation_id": "obs-a-1000",
+      "entity": "acct-a",
+      "at": 1000,
+      "selections": {
+        "account_age": "a-age-2",
+        "country_tier": "a-country-2",
+        "device_trust": "a-device-2",
+        "risk_score": "a-risk-3"
+      }
+    }
+  ]
+}
