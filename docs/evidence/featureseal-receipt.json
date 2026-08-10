@@ -1,0 +1,883 @@
+{
+  "cells": [
+    {
+      "at": 180,
+      "entity": "acct-c",
+      "expected_event": "c-age-1",
+      "feature": "account_age",
+      "observation_id": "obs-c-180",
+      "selected_event": "c-age-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 180,
+      "entity": "acct-c",
+      "expected_event": "c-country-1",
+      "feature": "country_tier",
+      "observation_id": "obs-c-180",
+      "selected_event": "c-country-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 180,
+      "entity": "acct-c",
+      "expected_event": "c-device-1",
+      "feature": "device_trust",
+      "observation_id": "obs-c-180",
+      "selected_event": "c-device-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 180,
+      "entity": "acct-c",
+      "expected_event": "c-risk-1",
+      "feature": "risk_score",
+      "observation_id": "obs-c-180",
+      "selected_event": "c-risk-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 550,
+      "entity": "acct-a",
+      "expected_event": "a-age-2",
+      "feature": "account_age",
+      "observation_id": "obs-a-550",
+      "selected_event": "a-age-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 550,
+      "entity": "acct-a",
+      "expected_event": "a-country-1",
+      "feature": "country_tier",
+      "observation_id": "obs-a-550",
+      "selected_event": "a-country-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 550,
+      "entity": "acct-a",
+      "expected_event": "a-device-1",
+      "feature": "device_trust",
+      "observation_id": "obs-a-550",
+      "selected_event": "a-device-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 550,
+      "entity": "acct-a",
+      "expected_event": "a-risk-1",
+      "feature": "risk_score",
+      "observation_id": "obs-a-550",
+      "selected_event": "a-risk-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 620,
+      "entity": "acct-a",
+      "expected_event": "a-age-2",
+      "feature": "account_age",
+      "observation_id": "obs-a-620",
+      "selected_event": "a-age-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 620,
+      "entity": "acct-a",
+      "expected_event": "a-country-1",
+      "feature": "country_tier",
+      "observation_id": "obs-a-620",
+      "selected_event": "a-country-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 620,
+      "entity": "acct-a",
+      "expected_event": "a-device-1",
+      "feature": "device_trust",
+      "observation_id": "obs-a-620",
+      "selected_event": "a-device-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 620,
+      "entity": "acct-a",
+      "expected_event": "a-risk-2",
+      "feature": "risk_score",
+      "observation_id": "obs-a-620",
+      "selected_event": "a-risk-1",
+      "status": "STALE_SELECTION"
+    },
+    {
+      "at": 700,
+      "entity": "acct-a",
+      "expected_event": "a-age-2",
+      "feature": "account_age",
+      "observation_id": "obs-a-700",
+      "selected_event": "a-age-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 700,
+      "entity": "acct-a",
+      "expected_event": "a-country-2",
+      "feature": "country_tier",
+      "observation_id": "obs-a-700",
+      "selected_event": "a-country-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 700,
+      "entity": "acct-a",
+      "expected_event": "a-device-1",
+      "feature": "device_trust",
+      "observation_id": "obs-a-700",
+      "selected_event": "a-device-2",
+      "status": "UNAVAILABLE_EVENT"
+    },
+    {
+      "at": 700,
+      "entity": "acct-a",
+      "expected_event": "a-risk-2",
+      "feature": "risk_score",
+      "observation_id": "obs-a-700",
+      "selected_event": "a-risk-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-a",
+      "expected_event": "a-age-2",
+      "feature": "account_age",
+      "observation_id": "obs-a-750",
+      "selected_event": "a-age-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-a",
+      "expected_event": "a-country-2",
+      "feature": "country_tier",
+      "observation_id": "obs-a-750",
+      "selected_event": "a-country-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-a",
+      "expected_event": null,
+      "feature": "device_trust",
+      "observation_id": "obs-a-750",
+      "selected_event": null,
+      "status": "MATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-a",
+      "expected_event": "a-risk-2",
+      "feature": "risk_score",
+      "observation_id": "obs-a-750",
+      "selected_event": "a-risk-3",
+      "status": "FUTURE_EVENT"
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": "b-age-1",
+      "feature": "account_age",
+      "observation_id": "obs-b-750",
+      "selected_event": "b-age-1",
+      "status": "MATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": "b-country-1",
+      "feature": "country_tier",
+      "observation_id": "obs-b-750",
+      "selected_event": "a-country-2",
+      "status": "IDENTITY_MISMATCH"
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": "b-device-1",
+      "feature": "device_trust",
+      "observation_id": "obs-b-750",
+      "selected_event": null,
+      "status": "MISSING_SELECTION"
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": null,
+      "feature": "risk_score",
+      "observation_id": "obs-b-750",
+      "selected_event": null,
+      "status": "MATCH"
+    },
+    {
+      "at": 1000,
+      "entity": "acct-a",
+      "expected_event": "a-age-2",
+      "feature": "account_age",
+      "observation_id": "obs-a-1000",
+      "selected_event": "a-age-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 1000,
+      "entity": "acct-a",
+      "expected_event": "a-country-2",
+      "feature": "country_tier",
+      "observation_id": "obs-a-1000",
+      "selected_event": "a-country-2",
+      "status": "MATCH"
+    },
+    {
+      "at": 1000,
+      "entity": "acct-a",
+      "expected_event": null,
+      "feature": "device_trust",
+      "observation_id": "obs-a-1000",
+      "selected_event": "a-device-2",
+      "status": "EXPIRED_EVENT"
+    },
+    {
+      "at": 1000,
+      "entity": "acct-a",
+      "expected_event": "a-risk-3",
+      "feature": "risk_score",
+      "observation_id": "obs-a-1000",
+      "selected_event": "a-risk-3",
+      "status": "MATCH"
+    }
+  ],
+  "findings": [
+    {
+      "at": 620,
+      "entity": "acct-a",
+      "expected_event": "a-risk-2",
+      "explanation": "a-risk-1 is not the newest eligible event; expected a-risk-2",
+      "feature": "risk_score",
+      "finding_id": "FS-E577DDC2E119",
+      "observation_id": "obs-a-620",
+      "rule": "STALE_SELECTION",
+      "selected_event": "a-risk-1",
+      "witness_events": [
+        "a-risk-1",
+        "a-risk-2"
+      ]
+    },
+    {
+      "at": 700,
+      "entity": "acct-a",
+      "expected_event": "a-device-1",
+      "explanation": "a-device-2 became available at 900 after 700",
+      "feature": "device_trust",
+      "finding_id": "FS-2287ECA79E1E",
+      "observation_id": "obs-a-700",
+      "rule": "UNAVAILABLE_EVENT",
+      "selected_event": "a-device-2",
+      "witness_events": [
+        "a-device-2",
+        "a-device-1"
+      ]
+    },
+    {
+      "at": 750,
+      "entity": "acct-a",
+      "expected_event": "a-risk-2",
+      "explanation": "a-risk-3 has event_time 800 after 750",
+      "feature": "risk_score",
+      "finding_id": "FS-5F316B491739",
+      "observation_id": "obs-a-750",
+      "rule": "FUTURE_EVENT",
+      "selected_event": "a-risk-3",
+      "witness_events": [
+        "a-risk-3",
+        "a-risk-2"
+      ]
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": "b-country-1",
+      "explanation": "a-country-2 belongs to acct-a/country_tier, not acct-b/country_tier",
+      "feature": "country_tier",
+      "finding_id": "FS-D385F416B12E",
+      "observation_id": "obs-b-750",
+      "rule": "IDENTITY_MISMATCH",
+      "selected_event": "a-country-2",
+      "witness_events": [
+        "a-country-2",
+        "b-country-1"
+      ]
+    },
+    {
+      "at": 750,
+      "entity": "acct-b",
+      "expected_event": "b-device-1",
+      "explanation": "obs-b-750 omits eligible event b-device-1 for device_trust",
+      "feature": "device_trust",
+      "finding_id": "FS-BAC380762278",
+      "observation_id": "obs-b-750",
+      "rule": "MISSING_SELECTION",
+      "selected_event": null,
+      "witness_events": [
+        "b-device-1"
+      ]
+    },
+    {
+      "at": 1000,
+      "entity": "acct-a",
+      "expected_event": null,
+      "explanation": "a-device-2 is outside the device_trust freshness window at 1000",
+      "feature": "device_trust",
+      "finding_id": "FS-774FCE02DCB6",
+      "observation_id": "obs-a-1000",
+      "rule": "EXPIRED_EVENT",
+      "selected_event": "a-device-2",
+      "witness_events": [
+        "a-device-2"
+      ]
+    }
+  ],
+  "format": "featureseal.receipt.v1",
+  "ledger": [
+    {
+      "entry_sha256": "1647db706b6e860e17634462e7d0190db407c382c1e9aed2cfecb3bd8eb04072",
+      "index": 0,
+      "kind": "feature",
+      "payload_sha256": "a02757511bb0fe988f64b0b6f87b70648a45f6dd94e6039f3db03d2a5cabdc5f",
+      "previous_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "entry_sha256": "786048d5cae35ceb8ac8363254752a7e8cc115fb275d92af56d9768d271ca34f",
+      "index": 1,
+      "kind": "feature",
+      "payload_sha256": "ea63f6397ae2b1bd5b4154ea1c23744238eaa5c5468621543a67379183508ee1",
+      "previous_sha256": "1647db706b6e860e17634462e7d0190db407c382c1e9aed2cfecb3bd8eb04072"
+    },
+    {
+      "entry_sha256": "100a84bb9fa80b63153fc274f1473976706056cf2203483ca0362f2a87438370",
+      "index": 2,
+      "kind": "feature",
+      "payload_sha256": "cb771d7168be78e61926296cdfcb8d4cf3b8e1ed46a96c20b9b4e2cab77030aa",
+      "previous_sha256": "786048d5cae35ceb8ac8363254752a7e8cc115fb275d92af56d9768d271ca34f"
+    },
+    {
+      "entry_sha256": "3d4fb902402e1bbc65ca90db6ccfd7ac38ea1cfbfd4214e185a1ed3900ef8d00",
+      "index": 3,
+      "kind": "feature",
+      "payload_sha256": "856736fffc7b2a30a58177279061352856ad4286bd5c1f04ed064e0a0910b13e",
+      "previous_sha256": "100a84bb9fa80b63153fc274f1473976706056cf2203483ca0362f2a87438370"
+    },
+    {
+      "entry_sha256": "dc1f5de8fe3732ae5a4357f064cdfa6f415407a27e0a8b9b51af7e45d9fdfa04",
+      "index": 4,
+      "kind": "event",
+      "payload_sha256": "c91b691343c5a7cc0550a41067687d05e4cf6892a66bb2e714533989df007254",
+      "previous_sha256": "3d4fb902402e1bbc65ca90db6ccfd7ac38ea1cfbfd4214e185a1ed3900ef8d00"
+    },
+    {
+      "entry_sha256": "860f8207abe24a5836358dd12d7cf2b18a026ec4561783116f098d5b9fdd2f58",
+      "index": 5,
+      "kind": "event",
+      "payload_sha256": "e7a9d87b56dc91c0154bdf3821d0352f102b367cafa42d4f906f8bdd8cb8fbf4",
+      "previous_sha256": "dc1f5de8fe3732ae5a4357f064cdfa6f415407a27e0a8b9b51af7e45d9fdfa04"
+    },
+    {
+      "entry_sha256": "c0d99009e1f93ffbb93eeec62150d36b305afc2104494fdfb91040d3dfe4bab9",
+      "index": 6,
+      "kind": "event",
+      "payload_sha256": "668df647fd900869f076fcfa791e25015281deb4f7931a00b9ac748117e55968",
+      "previous_sha256": "860f8207abe24a5836358dd12d7cf2b18a026ec4561783116f098d5b9fdd2f58"
+    },
+    {
+      "entry_sha256": "8271edb90f290b021e03cef99659811fb60d5c77dd5a3e856d617994d6c02a1d",
+      "index": 7,
+      "kind": "event",
+      "payload_sha256": "61cc70d63127aebc25c6d2e697567e1184572220c008db4c12c2ba88e178e6ff",
+      "previous_sha256": "c0d99009e1f93ffbb93eeec62150d36b305afc2104494fdfb91040d3dfe4bab9"
+    },
+    {
+      "entry_sha256": "fe3a0d1e49a7fdf1995311d79207c115063ba27a8ab84be497a3b54ab6a7c957",
+      "index": 8,
+      "kind": "event",
+      "payload_sha256": "9918500df804c4f84cca29d0c0949747e0550fc40509715609a99f6a1b5001bc",
+      "previous_sha256": "8271edb90f290b021e03cef99659811fb60d5c77dd5a3e856d617994d6c02a1d"
+    },
+    {
+      "entry_sha256": "c2ade4d39247ee3130afaf2d199f13c771bebe260aa01c13d641a62c60758097",
+      "index": 9,
+      "kind": "event",
+      "payload_sha256": "12cf1168f41a6431529248079de6866df499305b37a47b6e9fea599a75727071",
+      "previous_sha256": "fe3a0d1e49a7fdf1995311d79207c115063ba27a8ab84be497a3b54ab6a7c957"
+    },
+    {
+      "entry_sha256": "9a9589c0b7f44eb0e560eb2e72cc43334541c17c28c0023fbbef1eecd026502b",
+      "index": 10,
+      "kind": "event",
+      "payload_sha256": "5e770363f06969528f40d0c985a5b3ac289571cadfabdb59d3fb04ff414f2eba",
+      "previous_sha256": "c2ade4d39247ee3130afaf2d199f13c771bebe260aa01c13d641a62c60758097"
+    },
+    {
+      "entry_sha256": "c3dc7818fea55ae34031bf5fb1033315d866e3cbbd5fc69478143c1eec0a091c",
+      "index": 11,
+      "kind": "event",
+      "payload_sha256": "d8734a2edefe9ac9d6d34938cbc2d55a3d9d56ee62221e68aeecc1e5e4375769",
+      "previous_sha256": "9a9589c0b7f44eb0e560eb2e72cc43334541c17c28c0023fbbef1eecd026502b"
+    },
+    {
+      "entry_sha256": "11cdcb9f166d472ab972c88a158c48bf2966aff28a6781d6c9e202e7c0553856",
+      "index": 12,
+      "kind": "event",
+      "payload_sha256": "049718da1545823eea53d1e89d83897860b975a69f4a5cf759d39bdf34550d36",
+      "previous_sha256": "c3dc7818fea55ae34031bf5fb1033315d866e3cbbd5fc69478143c1eec0a091c"
+    },
+    {
+      "entry_sha256": "0d56dfb7ceefa07d7c384b132c761a3523db02f5a619d994755d5eb7f90a3cf6",
+      "index": 13,
+      "kind": "event",
+      "payload_sha256": "d539f25bde002e0a21e02563c86d27af4ddc0c0192e42e0e3f1721301ce28c7b",
+      "previous_sha256": "11cdcb9f166d472ab972c88a158c48bf2966aff28a6781d6c9e202e7c0553856"
+    },
+    {
+      "entry_sha256": "f470462e51cea1f3d5de5953b9a434e3c2289604c5952dead87dd22ee4acc6d1",
+      "index": 14,
+      "kind": "event",
+      "payload_sha256": "30eb46c02a623d6f0cb744ec9d602f5ac5240a7e95a7055611a869f66bda7a86",
+      "previous_sha256": "0d56dfb7ceefa07d7c384b132c761a3523db02f5a619d994755d5eb7f90a3cf6"
+    },
+    {
+      "entry_sha256": "465afeada1618ab7733a70acc3c486647d8c7fe731cccb6f2b4a626f6bb7d311",
+      "index": 15,
+      "kind": "event",
+      "payload_sha256": "3988bb87a9422e59c6f0f577c48953b5f1d6320e705c30fdd75b05f4680b9084",
+      "previous_sha256": "f470462e51cea1f3d5de5953b9a434e3c2289604c5952dead87dd22ee4acc6d1"
+    },
+    {
+      "entry_sha256": "fa82894a9b61eb1b909b276dc8f4674e8b5e5c8b00258b40704e3118d1cc7bcd",
+      "index": 16,
+      "kind": "event",
+      "payload_sha256": "cdbcdd724ee337250dc33dafa9b6e1669a1d3a0ccdee5fea56c70285f0c225c3",
+      "previous_sha256": "465afeada1618ab7733a70acc3c486647d8c7fe731cccb6f2b4a626f6bb7d311"
+    },
+    {
+      "entry_sha256": "4a3462ef4231b06c89abdd53dd1277b9a00fc1779de01724b4f3fbb55bcffa74",
+      "index": 17,
+      "kind": "event",
+      "payload_sha256": "f3e44cf828329709263356c8fe38d585c4211bab5f2d370b69e28b5284658938",
+      "previous_sha256": "fa82894a9b61eb1b909b276dc8f4674e8b5e5c8b00258b40704e3118d1cc7bcd"
+    },
+    {
+      "entry_sha256": "759eff3857625c2d810d99d6efda7a43fbbc5745cfb89231d529ab11ed8b2059",
+      "index": 18,
+      "kind": "event",
+      "payload_sha256": "a8bc9cbd8016dfd2f26dbf68393b5954f4e1011b9f0dd365473e186687b36b20",
+      "previous_sha256": "4a3462ef4231b06c89abdd53dd1277b9a00fc1779de01724b4f3fbb55bcffa74"
+    },
+    {
+      "entry_sha256": "029d468baa727fb8c9ec093707a4bd05d6e9476a93c584a645ea92bb6cc49b28",
+      "index": 19,
+      "kind": "event",
+      "payload_sha256": "240a421ca8fbaf365817933d369635edc819654e348c7674506403fa429ea6fc",
+      "previous_sha256": "759eff3857625c2d810d99d6efda7a43fbbc5745cfb89231d529ab11ed8b2059"
+    },
+    {
+      "entry_sha256": "43d41608a133da140fac1b2eaddae54375ec83c9ef87e3c620348794d33b77fc",
+      "index": 20,
+      "kind": "event",
+      "payload_sha256": "37fa3d0bcd0314058dbdae7a8d71c3ec9053e6cef5ce8f1e065263e1b20e56a8",
+      "previous_sha256": "029d468baa727fb8c9ec093707a4bd05d6e9476a93c584a645ea92bb6cc49b28"
+    },
+    {
+      "entry_sha256": "73c9342ef12096b839f20cc6b2b70ce3a91b8bffb4aaa6ba261bfc6abe32949a",
+      "index": 21,
+      "kind": "event",
+      "payload_sha256": "17df7d81e9269ca2a99c54bdc741daaa80cb6c2cdda0e78e79f0dae7df1f7e19",
+      "previous_sha256": "43d41608a133da140fac1b2eaddae54375ec83c9ef87e3c620348794d33b77fc"
+    },
+    {
+      "entry_sha256": "faaec0d11bf42dbc97a55901c7bcb10da8995d70d7218cc448cb72e98c703dfb",
+      "index": 22,
+      "kind": "observation",
+      "payload_sha256": "21df0510bd97df9e22da707a34f932267d97c657518a6cea45209926a45ac9b5",
+      "previous_sha256": "73c9342ef12096b839f20cc6b2b70ce3a91b8bffb4aaa6ba261bfc6abe32949a"
+    },
+    {
+      "entry_sha256": "07fd06774e41cbc45d94aaa3e2c8d04cef030eefd33745fc51680d9a2fde9785",
+      "index": 23,
+      "kind": "observation",
+      "payload_sha256": "4c24dff106022067d08c49af65e823fc8172992b61c5008bf1ce459f13eed49a",
+      "previous_sha256": "faaec0d11bf42dbc97a55901c7bcb10da8995d70d7218cc448cb72e98c703dfb"
+    },
+    {
+      "entry_sha256": "7dabd43864c4c31216d7471a25e39b1159a2a1580b00d80d1c7cc3511afbfdb6",
+      "index": 24,
+      "kind": "observation",
+      "payload_sha256": "a0ddbddb4311461cb7553c521b0b9209ee168899021781716f7dd75849684f45",
+      "previous_sha256": "07fd06774e41cbc45d94aaa3e2c8d04cef030eefd33745fc51680d9a2fde9785"
+    },
+    {
+      "entry_sha256": "c90c9d11bba92d83d7af087a7562658408c597601ac663c9332a2dbd2c93cc5d",
+      "index": 25,
+      "kind": "observation",
+      "payload_sha256": "49f4880d96a50022b67e2b8155ee96f6dbbc0159c4280c4e2a77d67c32178cb7",
+      "previous_sha256": "7dabd43864c4c31216d7471a25e39b1159a2a1580b00d80d1c7cc3511afbfdb6"
+    },
+    {
+      "entry_sha256": "63984341a5b441f8518b216647b34ffff6154a5e56d27f03b0fb7947ee1baba9",
+      "index": 26,
+      "kind": "observation",
+      "payload_sha256": "c0a1be6f68fc425c22a051dd87d8b8196666d1d67d8bc4908f8dccb8aaf9a06a",
+      "previous_sha256": "c90c9d11bba92d83d7af087a7562658408c597601ac663c9332a2dbd2c93cc5d"
+    },
+    {
+      "entry_sha256": "33cb6ff4bd045205ee959eb3ff7e27b27aa7afb0c8479398cc76987893998f8c",
+      "index": 27,
+      "kind": "observation",
+      "payload_sha256": "698c0c95c82365ed145c5ca2bcde270a62fb109ecf5b6077d582609bbc76ff5f",
+      "previous_sha256": "63984341a5b441f8518b216647b34ffff6154a5e56d27f03b0fb7947ee1baba9"
+    },
+    {
+      "entry_sha256": "8fed8fc815d9a2ce6a92b2dbea1e9f6f93390d19c5f0756f1b65fcb08d190b26",
+      "index": 28,
+      "kind": "observation",
+      "payload_sha256": "7098832adf351be273044d679e357a63dc4e669e4da527045517370f768f9ae7",
+      "previous_sha256": "33cb6ff4bd045205ee959eb3ff7e27b27aa7afb0c8479398cc76987893998f8c"
+    },
+    {
+      "entry_sha256": "2da9358a668dc18b2e42305c076d866ed588f9caf61725d4ff0589d88d16ad66",
+      "index": 29,
+      "kind": "finding",
+      "payload_sha256": "e9f2acf3fabb9b72a540810a329bc995369295a6ac861b9a30a869c9ce37fa57",
+      "previous_sha256": "8fed8fc815d9a2ce6a92b2dbea1e9f6f93390d19c5f0756f1b65fcb08d190b26"
+    },
+    {
+      "entry_sha256": "966323743a003faa058f8109c87ea88244e6acc3e89bb3db6a2330db0057b2ea",
+      "index": 30,
+      "kind": "finding",
+      "payload_sha256": "c7b4f373f63b84690fc5841feee582b26cadf12e14cd5a0726d705c5fc1c521f",
+      "previous_sha256": "2da9358a668dc18b2e42305c076d866ed588f9caf61725d4ff0589d88d16ad66"
+    },
+    {
+      "entry_sha256": "e9cdc8f76634c09d05a047fb84b074b3b99f73ad6fd438a437a03ad3dbf40346",
+      "index": 31,
+      "kind": "finding",
+      "payload_sha256": "690ee79d20886ec5630c9b32921c13bde5fbba7d474d07f9772ba86e4b85a7ea",
+      "previous_sha256": "966323743a003faa058f8109c87ea88244e6acc3e89bb3db6a2330db0057b2ea"
+    },
+    {
+      "entry_sha256": "bc094da2a57911d31709e889452afa20bbf72ea903dea956b1665011e50a7a6d",
+      "index": 32,
+      "kind": "finding",
+      "payload_sha256": "b7e86d4023cf70c9d75ec42b71555396c7eb1a9cee7e91711ea5313f88ed1c75",
+      "previous_sha256": "e9cdc8f76634c09d05a047fb84b074b3b99f73ad6fd438a437a03ad3dbf40346"
+    },
+    {
+      "entry_sha256": "c4d42a59391a9d3077bec58e855a3ccc700f755b0edd21613fd1ebff11bd346d",
+      "index": 33,
+      "kind": "finding",
+      "payload_sha256": "dedcfb7cdb7405ec66c858a6728675941b2031e1aa0b066e001fdc2efa5936d1",
+      "previous_sha256": "bc094da2a57911d31709e889452afa20bbf72ea903dea956b1665011e50a7a6d"
+    },
+    {
+      "entry_sha256": "820875811bcaeebd271724b7b42b2e6961e345c69eb9f22edc8f52e418ffc62d",
+      "index": 34,
+      "kind": "finding",
+      "payload_sha256": "1e6afcb723e6f2443ac5430f7398778e4680f0404f258b241efbaaeee65cfdf7",
+      "previous_sha256": "c4d42a59391a9d3077bec58e855a3ccc700f755b0edd21613fd1ebff11bd346d"
+    }
+  ],
+  "ledger_root_sha256": "820875811bcaeebd271724b7b42b2e6961e345c69eb9f22edc8f52e418ffc62d",
+  "receipt_sha256": "ead8f767d0f8e8da4cca8a459a878319490eebadc4568d4bd04776c1758ee8ae",
+  "snapshot": {
+    "events": [
+      {
+        "available_time": 100,
+        "entity": "acct-a",
+        "event_id": "a-age-1",
+        "event_time": 100,
+        "feature": "account_age",
+        "source": "crm",
+        "value": 120
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-a",
+        "event_id": "a-country-1",
+        "event_time": 100,
+        "feature": "country_tier",
+        "source": "geo",
+        "value": 1
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-b",
+        "event_id": "b-age-1",
+        "event_time": 100,
+        "feature": "account_age",
+        "source": "crm",
+        "value": 400
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-b",
+        "event_id": "b-country-1",
+        "event_time": 100,
+        "feature": "country_tier",
+        "source": "geo",
+        "value": 2
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-c",
+        "event_id": "c-age-1",
+        "event_time": 100,
+        "feature": "account_age",
+        "source": "crm",
+        "value": 30
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-c",
+        "event_id": "c-country-1",
+        "event_time": 100,
+        "feature": "country_tier",
+        "source": "geo",
+        "value": 1
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-c",
+        "event_id": "c-device-1",
+        "event_time": 100,
+        "feature": "device_trust",
+        "source": "device",
+        "value": 0.8
+      },
+      {
+        "available_time": 100,
+        "entity": "acct-c",
+        "event_id": "c-risk-1",
+        "event_time": 100,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.15
+      },
+      {
+        "available_time": 400,
+        "entity": "acct-a",
+        "event_id": "a-device-1",
+        "event_time": 400,
+        "feature": "device_trust",
+        "source": "device",
+        "value": 0.9
+      },
+      {
+        "available_time": 450,
+        "entity": "acct-a",
+        "event_id": "a-risk-1",
+        "event_time": 450,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.2
+      },
+      {
+        "available_time": 500,
+        "entity": "acct-a",
+        "event_id": "a-age-2",
+        "event_time": 500,
+        "feature": "account_age",
+        "source": "crm",
+        "value": 121
+      },
+      {
+        "available_time": 500,
+        "entity": "acct-b",
+        "event_id": "b-device-1",
+        "event_time": 500,
+        "feature": "device_trust",
+        "source": "device",
+        "value": 0.7
+      },
+      {
+        "available_time": 500,
+        "entity": "acct-b",
+        "event_id": "b-risk-1",
+        "event_time": 500,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.4
+      },
+      {
+        "available_time": 600,
+        "entity": "acct-a",
+        "event_id": "a-risk-2",
+        "event_time": 600,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.3
+      },
+      {
+        "available_time": 700,
+        "entity": "acct-a",
+        "event_id": "a-country-2",
+        "event_time": 700,
+        "feature": "country_tier",
+        "source": "geo",
+        "value": 2
+      },
+      {
+        "available_time": 800,
+        "entity": "acct-a",
+        "event_id": "a-risk-3",
+        "event_time": 800,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.8
+      },
+      {
+        "available_time": 900,
+        "entity": "acct-a",
+        "event_id": "a-device-2",
+        "event_time": 650,
+        "feature": "device_trust",
+        "source": "device",
+        "value": 0.2
+      },
+      {
+        "available_time": 900,
+        "entity": "acct-b",
+        "event_id": "b-risk-2",
+        "event_time": 720,
+        "feature": "risk_score",
+        "source": "risk",
+        "value": 0.9
+      }
+    ],
+    "features": [
+      {
+        "max_age_seconds": 1000,
+        "name": "account_age",
+        "value_type": "integer"
+      },
+      {
+        "max_age_seconds": 1000,
+        "name": "country_tier",
+        "value_type": "integer"
+      },
+      {
+        "max_age_seconds": 300,
+        "name": "device_trust",
+        "value_type": "number"
+      },
+      {
+        "max_age_seconds": 200,
+        "name": "risk_score",
+        "value_type": "number"
+      }
+    ],
+    "format": "featureseal.snapshot.v1",
+    "observations": [
+      {
+        "at": 180,
+        "entity": "acct-c",
+        "observation_id": "obs-c-180",
+        "selections": {
+          "account_age": "c-age-1",
+          "country_tier": "c-country-1",
+          "device_trust": "c-device-1",
+          "risk_score": "c-risk-1"
+        }
+      },
+      {
+        "at": 550,
+        "entity": "acct-a",
+        "observation_id": "obs-a-550",
+        "selections": {
+          "account_age": "a-age-2",
+          "country_tier": "a-country-1",
+          "device_trust": "a-device-1",
+          "risk_score": "a-risk-1"
+        }
+      },
+      {
+        "at": 620,
+        "entity": "acct-a",
+        "observation_id": "obs-a-620",
+        "selections": {
+          "account_age": "a-age-2",
+          "country_tier": "a-country-1",
+          "device_trust": "a-device-1",
+          "risk_score": "a-risk-1"
+        }
+      },
+      {
+        "at": 700,
+        "entity": "acct-a",
+        "observation_id": "obs-a-700",
+        "selections": {
+          "account_age": "a-age-2",
+          "country_tier": "a-country-2",
+          "device_trust": "a-device-2",
+          "risk_score": "a-risk-2"
+        }
+      },
+      {
+        "at": 750,
+        "entity": "acct-a",
+        "observation_id": "obs-a-750",
+        "selections": {
+          "account_age": "a-age-2",
+          "country_tier": "a-country-2",
+          "device_trust": null,
+          "risk_score": "a-risk-3"
+        }
+      },
+      {
+        "at": 750,
+        "entity": "acct-b",
+        "observation_id": "obs-b-750",
+        "selections": {
+          "account_age": "b-age-1",
+          "country_tier": "a-country-2",
+          "device_trust": null,
+          "risk_score": null
+        }
+      },
+      {
+        "at": 1000,
+        "entity": "acct-a",
+        "observation_id": "obs-a-1000",
+        "selections": {
+          "account_age": "a-age-2",
+          "country_tier": "a-country-2",
+          "device_trust": "a-device-2",
+          "risk_score": "a-risk-3"
+        }
+      }
+    ],
+    "snapshot_id": "late-feature-incident"
+  },
+  "snapshot_sha256": "62b1a23c692afa29871346cd167151ed5e124abfacb2e7bb30cacc747fdd2113",
+  "summary": {
+    "cells": 28,
+    "entities": 3,
+    "events": 18,
+    "features": 4,
+    "finding_cells": 6,
+    "matched_cells": 22,
+    "observations": 7,
+    "rule_counts": {
+      "EXPIRED_EVENT": 1,
+      "FUTURE_EVENT": 1,
+      "IDENTITY_MISMATCH": 1,
+      "MISSING_SELECTION": 1,
+      "STALE_SELECTION": 1,
+      "UNAVAILABLE_EVENT": 1
+    }
+  }
+}

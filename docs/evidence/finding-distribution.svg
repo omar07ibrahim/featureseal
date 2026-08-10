@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590">
+<defs><linearGradient id="bar"><stop stop-color="#7857ed"/><stop offset="1" stop-color="#43c8cf"/></linearGradient></defs>
+<rect width="1200" height="590" rx="28" fill="#f7f8fc"/>
+<text x="55" y="58" fill="#7857ed" font-size="14" font-weight="800" letter-spacing="2">PRIMARY REASON DISTRIBUTION</text>
+<text x="55" y="101" fill="#18243a" font-size="31" font-weight="800">Every mismatched cell gets one reason</text>
+<text x="55" y="181" fill="#273550" font-size="13">Future event</text><rect x="225" y="163" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="163" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="181" fill="#18243a" font-size="13" font-weight="800">1</text><text x="55" y="239" fill="#273550" font-size="13">Unavailable event</text><rect x="225" y="221" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="221" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="239" fill="#18243a" font-size="13" font-weight="800">1</text><text x="55" y="297" fill="#273550" font-size="13">Identity mismatch</text><rect x="225" y="279" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="279" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="297" fill="#18243a" font-size="13" font-weight="800">1</text><text x="55" y="355" fill="#273550" font-size="13">Expired event</text><rect x="225" y="337" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="337" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="355" fill="#18243a" font-size="13" font-weight="800">1</text><text x="55" y="413" fill="#273550" font-size="13">Stale selection</text><rect x="225" y="395" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="395" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="413" fill="#18243a" font-size="13" font-weight="800">1</text><text x="55" y="471" fill="#273550" font-size="13">Missing selection</text><rect x="225" y="453" width="470" height="20" rx="10" fill="#edf0f6"/><rect x="225" y="453" width="470" height="20" rx="10" fill="url(#bar)"/><text x="712" y="471" fill="#18243a" font-size="13" font-weight="800">1</text>
+<rect x="790" y="148" width="350" height="300" rx="26" fill="#11182d"/>
+<text x="830" y="198" fill="#78e5df" font-size="13" font-weight="800">REFERENCE SCENARIO</text>
+<text x="830" y="268" fill="#ffffff" font-size="57" font-weight="800">22</text>
+<text x="830" y="300" fill="#cbd5e8" font-size="14">matched cells</text>
+<text x="830" y="364" fill="#ff9aac" font-size="38" font-weight="800">6</text>
+<text x="920" y="364" fill="#cbd5e8" font-size="14">findings / 28 total</text>
+<text x="55" y="528" fill="#66758b" font-size="13">Counts describe the checked-in synthetic fixture—not a production leakage rate.</text>
+</svg>

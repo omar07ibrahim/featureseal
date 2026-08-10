@@ -1,0 +1,25 @@
+$ featureseal analyze snapshot.json --output receipt.json
+analyzed 18 events / 7 observations / 28 join cells
+findings 6; matched cells 22
+snapshot sha256 62b1a23c692afa29871346cd167151ed5e124abfacb2e7bb30cacc747fdd2113
+ledger root    820875811bcaeebd271724b7b42b2e6961e345c69eb9f22edc8f52e418ffc62d
+receipt sha256 ead8f767d0f8e8da4cca8a459a878319490eebadc4568d4bd04776c1758ee8ae
+
+$ featureseal verify receipt.json
+verified 28 cells with SQLite; 6 findings; 22 matched
+ledger root    820875811bcaeebd271724b7b42b2e6961e345c69eb9f22edc8f52e418ffc62d
+receipt sha256 ead8f767d0f8e8da4cca8a459a878319490eebadc4568d4bd04776c1758ee8ae
+
+$ featureseal inspect receipt.json
+ID              RULE                OBSERVATION  FEATURE       SELECTED     EXPECTED
+----------------------------------------------------------------------------------------------
+FS-E577DDC2E119  STALE_SELECTION      obs-a-620     risk_score     a-risk-1      a-risk-2
+FS-2287ECA79E1E  UNAVAILABLE_EVENT    obs-a-700     device_trust   a-device-2    a-device-1
+FS-5F316B491739  FUTURE_EVENT         obs-a-750     risk_score     a-risk-3      a-risk-2
+FS-D385F416B12E  IDENTITY_MISMATCH    obs-b-750     country_tier   a-country-2   b-country-1
+FS-BAC380762278  MISSING_SELECTION    obs-b-750     device_trust   ∅             b-device-1
+FS-774FCE02DCB6  EXPIRED_EVENT        obs-a-1000    device_trust   a-device-2    ∅
+
+$ featureseal report receipt.json --output report.html
+wrote verified report report.html
+receipt sha256 ead8f767d0f8e8da4cca8a459a878319490eebadc4568d4bd04776c1758ee8ae

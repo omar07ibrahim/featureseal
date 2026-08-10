@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
+<defs><linearGradient id="bg2" x2="1"><stop stop-color="#f7f8ff"/><stop offset="1" stop-color="#eef9f8"/></linearGradient><marker id="tip" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#59677f"/></marker></defs>
+<rect width="1200" height="560" rx="28" fill="url(#bg2)"/>
+<text x="58" y="62" fill="#7857ed" font-size="14" font-weight="800" letter-spacing="2">REAL WITNESS / FS-2287ECA79E1E</text>
+<text x="58" y="108" fill="#18243a" font-size="33" font-weight="800">Event time is not availability time</text>
+<text x="58" y="142" fill="#66758b" font-size="14">obs-a-700 · device_trust · selected a-device-2</text>
+<line x1="120" y1="272" x2="1060" y2="272" stroke="#aab4c7" stroke-width="3" marker-end="url(#tip)"/>
+<line x1="731" y1="233" x2="966" y2="233" stroke="#e9a63a" stroke-width="8" stroke-linecap="round"/>
+<circle cx="731" cy="272" r="13" fill="#43c8cf"/><circle cx="966" cy="272" r="13" fill="#e9a63a"/>
+<line x1="778" y1="190" x2="778" y2="352" stroke="#e85e72" stroke-width="4" stroke-dasharray="9 7"/>
+<circle cx="496" cy="272" r="10" fill="#16846f"/>
+<text x="731" y="206" text-anchor="middle" fill="#273550" font-size="13" font-weight="800">event_time 650</text>
+<text x="966" y="206" text-anchor="middle" fill="#9a6817" font-size="13" font-weight="800">available 900</text>
+<text x="778" y="378" text-anchor="middle" fill="#b83e54" font-size="13" font-weight="800">observation 700</text>
+<text x="496" y="315" text-anchor="middle" fill="#126b5c" font-size="12">eligible a-device-1</text>
+<text x="58" y="445" fill="#18243a" font-size="18" font-weight="800">Why it is flagged</text>
+<text x="58" y="477" fill="#59677f" font-size="14">a-device-2 became available at 900 after 700</text>
+<text x="58" y="515" fill="#59677f" font-size="13">Selection is replayed with both event_time ≤ observation and available_time ≤ observation.</text>
+</svg>
