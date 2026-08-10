@@ -171,7 +171,7 @@ def parse_snapshot(document: object) -> Snapshot:
         features.append(
             FeatureSpec(
                 name=_name(value["name"], f"features[{index}].name"),
-                value_type=cast(str, value_type),
+                value_type=value_type,
                 max_age_seconds=_bounded_int(
                     value["max_age_seconds"],
                     f"features[{index}].max_age_seconds",
