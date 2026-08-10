@@ -14,9 +14,7 @@ def build_ledger(
         ("feature", feature.to_dict()) for feature in snapshot.features
     ]
     payloads.extend(("event", event.to_dict()) for event in snapshot.events)
-    payloads.extend(
-        ("observation", observation.to_dict()) for observation in snapshot.observations
-    )
+    payloads.extend(("observation", observation.to_dict()) for observation in snapshot.observations)
     payloads.extend(("finding", finding) for finding in findings)
 
     previous = "0" * 64

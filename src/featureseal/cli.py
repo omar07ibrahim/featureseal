@@ -68,9 +68,7 @@ def _analyze(snapshot_path: Path, output: Path) -> None:
         f"analyzed {summary['events']} events / {summary['observations']} observations / "
         f"{summary['cells']} join cells"
     )
-    print(
-        f"findings {summary['finding_cells']}; matched cells {summary['matched_cells']}"
-    )
+    print(f"findings {summary['finding_cells']}; matched cells {summary['matched_cells']}")
     print(f"snapshot sha256 {receipt['snapshot_sha256']}")
     print(f"ledger root    {receipt['ledger_root_sha256']}")
     print(f"receipt sha256 {receipt['receipt_sha256']}")
@@ -90,10 +88,7 @@ def _verify(path: Path) -> None:
 def _inspect(path: Path) -> None:
     receipt = _load_receipt(path)
     findings = cast(list[dict[str, object]], receipt["findings"])
-    print(
-        "ID               RULE                 OBSERVATION   FEATURE        "
-        "SELECTED      EXPECTED"
-    )
+    print("ID              RULE                OBSERVATION  FEATURE       SELECTED     EXPECTED")
     print("-" * 94)
     for finding in findings:
         print(

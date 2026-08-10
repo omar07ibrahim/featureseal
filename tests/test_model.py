@@ -132,9 +132,7 @@ def test_supported_feature_values_are_accepted(value_type: str, value: object) -
     document = {
         "format": "featureseal.snapshot.v1",
         "snapshot_id": "types",
-        "features": [
-            {"name": "value", "value_type": value_type, "max_age_seconds": 10}
-        ],
+        "features": [{"name": "value", "value_type": value_type, "max_age_seconds": 10}],
         "events": [
             {
                 "event_id": "value-1",

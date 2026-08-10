@@ -15,9 +15,7 @@ def _document(
     return {
         "format": "featureseal.snapshot.v1",
         "snapshot_id": "join-edge",
-        "features": [
-            {"name": "score", "value_type": "number", "max_age_seconds": max_age}
-        ],
+        "features": [{"name": "score", "value_type": "number", "max_age_seconds": max_age}],
         "events": [
             {
                 "event_id": "older",

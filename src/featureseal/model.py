@@ -121,11 +121,7 @@ def _name(value: object, label: str) -> str:
 
 
 def _bounded_int(value: object, label: str, *, minimum: int = 0) -> int:
-    if (
-        isinstance(value, bool)
-        or not isinstance(value, int)
-        or not minimum <= value <= MAX_TIME
-    ):
+    if isinstance(value, bool) or not isinstance(value, int) or not minimum <= value <= MAX_TIME:
         raise ContractError(f"{label} must be an integer in {minimum}..{MAX_TIME}")
     return value
 
@@ -224,10 +220,7 @@ def parse_snapshot(document: object) -> Snapshot:
         raise ContractError("entity/feature/event_time coordinates must be unique")
 
     raw_observations = root["observations"]
-    if (
-        not isinstance(raw_observations, list)
-        or not 1 <= len(raw_observations) <= MAX_OBSERVATIONS
-    ):
+    if not isinstance(raw_observations, list) or not 1 <= len(raw_observations) <= MAX_OBSERVATIONS:
         raise ContractError(f"observations must contain 1..{MAX_OBSERVATIONS} entries")
     observations: list[Observation] = []
     for index, raw in enumerate(raw_observations):
@@ -249,9 +242,7 @@ def parse_snapshot(document: object) -> Snapshot:
                     f"observations[{index}].selections.{feature_name}",
                 )
                 if event_id not in event_by_id:
-                    raise ContractError(
-                        f"observations[{index}] selects unknown event {event_id}"
-                    )
+                    raise ContractError(f"observations[{index}] selects unknown event {event_id}")
                 selections[feature_name] = event_id
         observations.append(
             Observation(
@@ -281,7 +272,5 @@ def parse_snapshot(document: object) -> Snapshot:
                 ),
             )
         ),
-        observations=tuple(
-            sorted(observations, key=lambda item: (item.at, item.observation_id))
-        ),
+        observations=tuple(sorted(observations, key=lambda item: (item.at, item.observation_id))),
     )

@@ -149,9 +149,7 @@ def _finding(
     expected: str | None,
     event_by_id: dict[str, FeatureEvent],
 ) -> dict[str, object]:
-    witnesses = list(
-        dict.fromkeys(event for event in (selected, expected) if event is not None)
-    )
+    witnesses = list(dict.fromkeys(event for event in (selected, expected) if event is not None))
     body: dict[str, object] = {
         "rule": rule,
         "observation_id": observation.observation_id,
@@ -240,9 +238,7 @@ def _ledger(
         ("feature", feature.to_dict()) for feature in snapshot.features
     ]
     payloads.extend(("event", event.to_dict()) for event in snapshot.events)
-    payloads.extend(
-        ("observation", observation.to_dict()) for observation in snapshot.observations
-    )
+    payloads.extend(("observation", observation.to_dict()) for observation in snapshot.observations)
     payloads.extend(("finding", finding) for finding in findings)
     entries: list[dict[str, object]] = []
     previous = "0" * 64

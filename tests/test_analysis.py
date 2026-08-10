@@ -26,9 +26,7 @@ def _clean_snapshot() -> dict[str, object]:
     return {
         "format": "featureseal.snapshot.v1",
         "snapshot_id": "clean",
-        "features": [
-            {"name": "score", "value_type": "number", "max_age_seconds": 100}
-        ],
+        "features": [{"name": "score", "value_type": "number", "max_age_seconds": 100}],
         "events": [
             {
                 "event_id": "score-1",
@@ -73,10 +71,7 @@ def test_incident_summary_is_exact(incident: dict[str, object]) -> None:
 
 def test_incident_finding_order_is_exact(incident: dict[str, object]) -> None:
     findings = _findings(analyze_document(incident))
-    assert [
-        (item["observation_id"], item["feature"], item["rule"])
-        for item in findings
-    ] == [
+    assert [(item["observation_id"], item["feature"], item["rule"]) for item in findings] == [
         ("obs-a-620", "risk_score", "STALE_SELECTION"),
         ("obs-a-700", "device_trust", "UNAVAILABLE_EVENT"),
         ("obs-a-750", "risk_score", "FUTURE_EVENT"),
@@ -93,9 +88,7 @@ def test_all_rules_have_one_public_witness(incident: dict[str, object]) -> None:
 
 
 def test_selected_and_expected_witnesses_are_explicit(incident: dict[str, object]) -> None:
-    findings = {
-        str(item["rule"]): item for item in _findings(analyze_document(incident))
-    }
+    findings = {str(item["rule"]): item for item in _findings(analyze_document(incident))}
     assert findings["FUTURE_EVENT"]["selected_event"] == "a-risk-3"
     assert findings["FUTURE_EVENT"]["expected_event"] == "a-risk-2"
     assert findings["UNAVAILABLE_EVENT"]["selected_event"] == "a-device-2"
@@ -112,9 +105,7 @@ def test_cell_status_counts_match_summary(incident: dict[str, object]) -> None:
 
 
 def test_finding_ids_are_unique_and_content_bound(incident: dict[str, object]) -> None:
-    identifiers = [
-        str(item["finding_id"]) for item in _findings(analyze_document(incident))
-    ]
+    identifiers = [str(item["finding_id"]) for item in _findings(analyze_document(incident))]
     assert len(identifiers) == len(set(identifiers))
     assert all(identifier.startswith("FS-") and len(identifier) == 15 for identifier in identifiers)
 
