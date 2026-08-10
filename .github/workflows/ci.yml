@@ -38,6 +38,7 @@ jobs:
       - name: Lint, type-check, and test
         run: |
           set -euo pipefail
+          python tools/capture_evidence.py --help >/dev/null
           python -m ruff check .
           python -m ruff format --check .
           python -m mypy
