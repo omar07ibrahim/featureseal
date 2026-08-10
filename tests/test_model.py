@@ -33,6 +33,8 @@ def _broken(incident: dict[str, object], case: str) -> object:
         features[0]["name"] = "Bad Name"
     elif case == "bad-value-type":
         features[0]["value_type"] = "vector"
+    elif case == "unhashable-value-type":
+        features[0]["value_type"] = []
     elif case == "negative-age":
         features[0]["max_age_seconds"] = -1
     elif case == "boolean-age":
@@ -91,6 +93,7 @@ def _broken(incident: dict[str, object], case: str) -> object:
         "duplicate-feature",
         "bad-feature-name",
         "bad-value-type",
+        "unhashable-value-type",
         "negative-age",
         "boolean-age",
         "no-events",

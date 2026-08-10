@@ -166,7 +166,7 @@ def parse_snapshot(document: object) -> Snapshot:
         value = _as_object(raw, f"features[{index}]")
         _exact_keys(value, _FEATURE_KEYS, f"features[{index}]")
         value_type = value["value_type"]
-        if value_type not in _VALUE_TYPES:
+        if not isinstance(value_type, str) or value_type not in _VALUE_TYPES:
             raise ContractError(f"features[{index}].value_type is invalid")
         features.append(
             FeatureSpec(

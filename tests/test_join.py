@@ -63,5 +63,5 @@ def test_expired_history_yields_no_selection() -> None:
 
 
 def test_zero_freshness_accepts_exact_event_time() -> None:
-    snapshot = parse_snapshot(_document(at=20, max_age=0))
-    assert expected_selections(snapshot)[("obs", "score")] is None
+    snapshot = parse_snapshot(_document(at=10, max_age=0))
+    assert expected_selections(snapshot)[("obs", "score")] == "older"
