@@ -90,7 +90,10 @@ def _verify(path: Path) -> None:
 def _inspect(path: Path) -> None:
     receipt = _load_receipt(path)
     findings = cast(list[dict[str, object]], receipt["findings"])
-    print("ID               RULE                 OBSERVATION   FEATURE        SELECTED      EXPECTED")
+    print(
+        "ID               RULE                 OBSERVATION   FEATURE        "
+        "SELECTED      EXPECTED"
+    )
     print("-" * 94)
     for finding in findings:
         print(
