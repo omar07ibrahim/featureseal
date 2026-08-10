@@ -174,8 +174,7 @@ def prepare(
         raise ValueError("CLI transcript does not expose the receipt digest")
     if (
         f"verified {summary['cells']} cells with SQLite; "
-        f"{summary['finding_cells']} findings; {summary['matched_cells']} matched"
-        not in cli
+        f"{summary['finding_cells']} findings; {summary['matched_cells']} matched" not in cli
     ):
         raise ValueError("CLI transcript does not include independent replay")
 
@@ -522,11 +521,15 @@ def _availability_timeline_svg(receipt: dict[str, object]) -> str:
     grid = []
     for tick in (0, 250, 500, 750, 1000):
         x = xpos(tick)
-        grid.append(f'<line x1="{x}" y1="130" x2="{x}" y2="705" stroke="#dce2ee"/><text x="{x}" y="112" text-anchor="middle" fill="#718096" font-size="11">{tick}</text>')
+        grid.append(
+            f'<line x1="{x}" y1="130" x2="{x}" y2="705" stroke="#dce2ee"/><text x="{x}" y="112" text-anchor="middle" fill="#718096" font-size="11">{tick}</text>'
+        )
     labels = []
     for index, (entity, feature) in enumerate(rows):
         y = 154 + index * 44
-        labels.append(f'<text x="48" y="{y + 4}" fill="#26344e" font-size="11"><tspan font-weight="800">{html.escape(entity)}</tspan><tspan x="118">{html.escape(feature)}</tspan></text><line x1="230" y1="{y}" x2="1130" y2="{y}" stroke="#edf0f6"/>')
+        labels.append(
+            f'<text x="48" y="{y + 4}" fill="#26344e" font-size="11"><tspan font-weight="800">{html.escape(entity)}</tspan><tspan x="118">{html.escape(feature)}</tspan></text><line x1="230" y1="{y}" x2="1130" y2="{y}" stroke="#edf0f6"/>'
+        )
     marks = []
     for event in events:
         y = 154 + row_index[(str(event["entity"]), str(event["feature"]))] * 44
@@ -534,7 +537,9 @@ def _availability_timeline_svg(receipt: dict[str, object]) -> str:
         end = xpos(int(event["available_time"]))
         late = end > start
         color = "#e9a63a" if late else "#43c8cf"
-        marks.append(f'<line x1="{start}" y1="{y}" x2="{max(start + 2, end)}" y2="{y}" stroke="{color}" stroke-width="7" stroke-linecap="round"/><circle cx="{start}" cy="{y}" r="5" fill="#7857ed"/><text x="{max(start, end) + 7}" y="{y - 7}" fill="#42526d" font-size="9">{html.escape(str(event["event_id"]))}</text>')
+        marks.append(
+            f'<line x1="{start}" y1="{y}" x2="{max(start + 2, end)}" y2="{y}" stroke="{color}" stroke-width="7" stroke-linecap="round"/><circle cx="{start}" cy="{y}" r="5" fill="#7857ed"/><text x="{max(start, end) + 7}" y="{y - 7}" fill="#42526d" font-size="9">{html.escape(str(event["event_id"]))}</text>'
+        )
     late_count = sum(int(event["available_time"]) > int(event["event_time"]) for event in events)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
 <rect width="1200" height="760" rx="28" fill="#ffffff"/>
